@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanderGari Design Preview</title>
+    <style>
+        :root {
+            /* Colors */
+            --color-primary-blue: #004ac6;
+            --color-primary-blue-dark: #003d9f;
+            --color-primary-blue-light: #3366d9;
+            --color-accent-orange: #f97316;
+            --color-accent-orange-dark: #d85b12;
+            --color-accent-orange-light: #fbb88f;
+
+            /* Neutrals */
+            --color-neutral-white: #ffffff;
+            --color-neutral-black: #000000;
+            --color-neutral-gray50: #f8fafc;
+            --color-neutral-gray100: #f1f5f9;
+            --color-neutral-gray200: #e2e8f0;
+            --color-neutral-gray300: #cbd5e1;
+            --color-neutral-gray400: #94a3b8;
+            --color-neutral-gray500: #64748b;
+            --color-neutral-gray600: #475569;
+            --color-neutral-gray700: #334155;
+            --color-neutral-gray800: #1e293b;
+            --color-neutral-gray900: #0f172a;
+
+            /* Semantic */
+            --color-background: var(--color-neutral-white);
+            --color-foreground: var(--color-neutral-gray900);
+            --color-primary: var(--color-primary-blue);
+            --color-primary-foreground: var(--color-neutral-white);
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-error: #ef4444;
+
+            /* Typography */
+            --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+            --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+            /* Font sizes */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+
+            /* Font weights */
+            --font-light: 300;
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            --font-extrabold: 800;
+
+            /* Spacing */
+            --space-px: 1px;
+            --space-0: 0;
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+
+            /* Radius */
+            --radius-none: 0;
+            --radius-sm: 0.125rem;
+            --radius-default: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            --radius-3xl: 1.5rem;
+            --radius-full: 9999px;
+
+            /* Shadow */
+            --shadow-none: 0 0 #0000;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -3px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+            /* Transitions */
+            /* Transitions */
+            --transition-default: 0.15s ease;
+            --transition-hover: 0.2s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-neutral-gray50);
+            color: var(--color-foreground);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-6);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: var(--space-8);
+            padding: var(--space-8);
+            background: linear-gradient(135deg, var(--color-primary-blue), var(--color-accent-orange));
+            color: var(--color-neutral-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        h1 {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-extrabold);
+            margin-bottom: var(--space-2);
+        }
+
+        h2 {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            margin-bottom: var(--space-4);
+            color: var(--color-primary-blue);
+        }
+
+        h3 {
+            font-size: var(--text-xl);
+            font-weight: var(--font-semibold);
+            margin-bottom: var(--space-3);
+            color: var(--color-accent-orange);
+        }
+
+        p {
+            margin-bottom: var(--space-4);
+            color: var(--color-neutral-gray600);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .logo-icon {
+            width: 64px;
+            height: 64px;
+            margin-right: var(--space-3);
+        }
+
+        .banner-container {
+            margin: var(--space-8) 0;
+            text-align: center;
+        }
+
+        .banner-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .component-card {
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: var(--space-6);
+            transition: transform var(--transition-hover), box-shadow var(--transition-hover);
+        }
+
+        .component-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .component-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-4);
+        }
+
+        .component-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: var(--space-3);
+            flex-shrink: 0;
+        }
+
+        .component-title {
+            font-size: var(--text-lg);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary-blue);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: var(--space-4);
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--space-2);
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            margin-right: var(--space-2);
+            color: var(--color-accent-orange);
+        }
+
+        .feature-text {
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--space-3) var(--space-6);
+            background-color: var(--color-primary-blue);
+            color: var(--color-neutral-white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: var(--font-semibold);
+            cursor: pointer;
+            transition: all var(--transition-hover);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: var(--color-primary-blue-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-neutral-gray200);
+            color: var(--color-neutral-gray800);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-neutral-gray300);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-primary-blue);
+            color: var(--color-primary-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-primary-blue);
+            color: var(--color-neutral-white);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: var(--space-1) var(--space-3);
+            background-color: var(--color-accent-orange);
+            color: var(--color-neutral-white);
+            font-size: var(--text-xs);
+            font-weight: var(--font-semibold);
+            border-radius: var(--radius-full);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: var(--space-10);
+            padding: var(--space-6);
+            color: var(--color-neutral-gray500);
+            font-size: var(--text-sm);
+            border-top: 1px solid var(--color-neutral-gray200);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="30" stroke="white" stroke-width="2" fill="none"/>
+                <path d="M 32,2 L 42,12 L 52,12 L 44,20 L 48,30 L 32,24 L 16,30 L 20,20 L 12,12 L 22,12 Z" fill="white"/>
+            </svg>
+            <div>
+                <h1>ChanderGari</h1>
+                <p>Your journey, perfectly mapped out</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Brand Identity</h2>
+            <p>Discover the visual language that brings the ChanderGari travel experience to life.</p>
+
+            <div class="banner-container">
+                <img src="twitter-banner.svg" alt="ChanderGari Twitter Banner">
+            </div>
+        </section>
+
+        <section>
+            <h2>Design System Components</h2>
+            <p>Explore the reusable components built with our design tokens.</p>
+
+            <div class="components">
+                <div class="component-card">
+                    <div class="component-header">
+                        <svg class="component-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9v9h4l5-5 5 5h4V9H3z"></path>
+                        </svg>
+                        <h3 class="component-title">Itinerary Planner</h3>
+                    </div>
+                    <p>Create personalized travel plans with intelligent scheduling and budget optimization.</p>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">📅</span><span class="feature-text">Smart day-by-day planning</span></li>
+                        <li><span class="feature-icon">💰</span><span class="feature-text">Budget-aware recommendations</span></li>
+                        <li><span class="feature-icon">🗺️</span><span class="feature-text">Grounded with live search & maps</span></li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-header">
+                        <svg class="component-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 16L12 13.54 5.82 16l-5-4.87L2 9.27l5-3.57L12 2z"></path>
+                        </svg>
+                        <h3 class="component-title">AI Tour Guide</h3>
+                    </div>
+                    <p>Chat with an intelligent travel assistant that adapts to your needs and preferences.</p>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">💭</span><span class="feature-text">Multiple reasoning modes (Fast/Balanced/Thinking)</span></li>
+                        <li><span class="feature-icon">🔍</span><span class="feature-text">Web search and Maps grounding</span></li>
+                        <li><span class="feature-icon">⚡</span><span class="feature-text">Real-time latency feedback</span></li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-header">
+                        <svg class="component-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12" y2="16"></line>
+                        </svg>
+                        <h3 class="component-title">Creative Studio</h3>
+                    </div>
+                    <p>Generate and edit travel-inspired images and videos with AI-powered tools.</p>
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">🖼️</span><span class="feature-text">Text-to-image generation</span></li>
+                        <li><span class="feature-icon">🎥</span><span class="feature-text">Text-to-video generation</span></li>
+                        <li><span class="feature-icon">✂️</span><span class="feature-text">AI-powered editing capabilities</span></li>
+                    </ul>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Color Palette</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); margin-top: var(--space-4);">
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-primary-blue); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Primary Blue</strong></div>
+                    <div>#004ac6</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-accent-orange); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Accent Orange</strong></div>
+                    <div>#f97316</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-neutral-gray100); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Light Gray</strong></div>
+                    <div>#f1f5f9</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-neutral-gray800); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Dark Gray</strong></div>
+                    <div>#1e293b</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-success); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Success Green</strong></div>
+                    <div>#10b981</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-warning); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Warning Orange</strong></div>
+                    <div>#f59e0b</div>
+                </div>
+                <div style="text-align: center; min-width: 100px;">
+                    <div style="width: 60px; height: 60px; background-color: var(--color-error); border-radius: var(--radius-md); margin: 0 auto var(--space-2);"></div>
+                    <div><strong>Error Red</strong></div>
+                    <div>#ef4444</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>ChanderGari Design System &copy; 2026</p>
+        <p>Enhanced with ui-ux-pro-max design principles</p>
+    </footer>
+</body>
+</html>
