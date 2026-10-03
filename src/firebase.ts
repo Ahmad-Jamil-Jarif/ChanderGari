@@ -21,15 +21,32 @@ import {
   query, 
   where 
 } from "firebase/firestore";
-import firebaseConfig from "../firebase-applet-config.json";
 import { BookingRecord } from "./types";
+
+// Firebase config is injected via Vite env vars (see .env.example).
+// Never commit real keys — GitHub secret scanning flags hardcoded AIza... keys.
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY as string,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN as string,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID as string,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID as string,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET as string,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID as string,
+};
+
+if (!firebaseConfig.apiKey) {
+  console.warn(
+    "Missing VITE_FIREBASE_API_KEY. Copy .env.example to .env and fill in your Firebase web config."
+  );
+}
 
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 export const auth = getAuth(app);
 
-// Initialize Firestore specifying databaseId if provided
-const dbId = (firebaseConfig as { firestoreDatabaseId?: string }).firestoreDatabaseId || "(default)";
+// Initialize Firestore specifying databaseId if provided (defaults to "(default)")
+const dbId =
+  (import.meta.env.VITE_FIRESTORE_DATABASE_ID as string) || "(default)";
 export const db = getFirestore(app, dbId);
 
 const googleProvider = new GoogleAuthProvider();
