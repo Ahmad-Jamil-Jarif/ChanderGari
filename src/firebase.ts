@@ -1,8 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { 
   getAuth, 
-  GoogleAuthProvider, 
-  signInWithPopup, 
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   updateProfile,
@@ -48,18 +46,6 @@ export const auth = getAuth(app);
 const dbId =
   (import.meta.env.VITE_FIRESTORE_DATABASE_ID as string) || "(default)";
 export const db = getFirestore(app, dbId);
-
-const googleProvider = new GoogleAuthProvider();
-
-export async function signInWithGoogle() {
-  try {
-    const result = await signInWithPopup(auth, googleProvider);
-    return result.user;
-  } catch (error) {
-    console.error("Google sign in error:", error);
-    throw error;
-  }
-}
 
 export async function registerWithEmail(email: string, pass: string, name: string) {
   try {
