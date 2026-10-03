@@ -91,68 +91,69 @@ Firebase (client SDK)
 
 ## 📸 App Tour (Screenshots)
 
-> Drop your captures into `docs/screenshots/` using the filenames below (Windows: `Win + Shift + S`). They render here automatically in this order.
-
 ### 1. Login
 
 <p align="center">
-  <img src="docs/screenshots/01-login.png" width="750" alt="Login — Google, email and guest access via AuthModal" />
+  <img src="Images/login%20page.png" width="750" alt="Login — Google, email and guest access via AuthModal" />
 </p>
 *AuthModal — Google sign-in, email register/login, one-tap guest session.*
 
 ### 2. Homepage
 
 <p align="center">
-  <img src="docs/screenshots/02-homepage.png" width="750" alt="Homepage — HeroLanding showcase" />
+  <img src="Images/homepage1.png" width="750" alt="Homepage — HeroLanding showcase" />
+</p>
+<p align="center">
+  <img src="Images/homepage2.png" width="750" alt="Homepage — featured routes and modules" />
 </p>
 *HeroLanding — showcase banner, featured routes and entry points into every module.*
 
 ### 3. Destinations
 
 <p align="center">
-  <img src="docs/screenshots/03-destinations.png" width="750" alt="Destinations grid with ratings and save-to-trips" />
+  <img src="Images/destination%20page.png" width="750" alt="Destinations grid with ratings and save-to-trips" />
 </p>
 *DestinationsGrid — curated spots with city details, ratings and save-to-trips.*
 
 ### 4. Activities
 
 <p align="center">
-  <img src="docs/screenshots/04-activities.png" width="750" alt="Adventure activities catalogue with booking" />
+  <img src="Images/activities%20page.png" width="750" alt="Adventure activities catalogue with booking" />
 </p>
 *AdventureActivities — trekking, boating, camping with difficulty, pricing and booking.*
 
 ### 5. Smart Guide
 
 <p align="center">
-  <img src="docs/screenshots/05-smart-guide.png" width="750" alt="Smart tour guide with contextual advice" />
+  <img src="Images/smart%20guide%20page.png" width="750" alt="Smart tour guide with contextual advice" />
 </p>
 *SmartTourGuide — packing, transit, weather and safety guidance.*
 
 ### 6. Chander Gari
 
 <p align="center">
-  <img src="docs/screenshots/06-chander-gari.png" width="750" alt="Chander Gari open-roof 4x4 transport charters" />
+  <img src="Images/hiring%20chader%20gari%20page.png" width="750" alt="Chander Gari open-roof 4x4 transport charters" />
 </p>
 *TransportOptions — open-roof 4x4 charters, Thanchi/Nilgiri routes, BDT + USD rates.*
 
 ### 7. Budget
 
 <p align="center">
-  <img src="docs/screenshots/07-budget.png" width="750" alt="Tour budget calculator with BDT conversion" />
+  <img src="Images/budget%20page.png" width="750" alt="Tour budget calculator with BDT conversion" />
 </p>
 *TourBudgetCalculator — duration × travelers math with live ৳122.02/USD conversion.*
 
 ### 8. Accommodations
 
 <p align="center">
-  <img src="docs/screenshots/08-accommodations.png" width="750" alt="Accommodations discovery — stays, food and hidden gems" />
+  <img src="Images/accomodation%20page.png" width="750" alt="Accommodations discovery — stays, food and hidden gems" />
 </p>
 *LocalDiscovery — boutique stays, street-food lanes and free-attraction picks.*
 
 ### 9. My Trips
 
 <p align="center">
-  <img src="docs/screenshots/09-mytrips.png" width="750" alt="My Trips — saved destinations and bookings timeline" />
+  <img src="Images/mytrips%20page.png" width="750" alt="My Trips — saved destinations and bookings timeline" />
 </p>
 *SavedTripsPage — saved destinations plus Firestore/local booking timeline.*
 
@@ -237,7 +238,7 @@ ChanderGari/
 │   │   ├── currency.ts       # BDT/USD formatting
 │   │   └── weather.ts        # Offline weather fallback
 │   └── assets/images/        # Jeep/hero imagery
-├── docs/screenshots/          # 01-login … 09-mytrips captures for the App Tour above
+├── Images/                     # Page captures used in the App Tour above
 ├── index.html
 ├── vite.config.ts
 ├── tsconfig.json
