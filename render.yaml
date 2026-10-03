@@ -2,15 +2,11 @@ services:
   - type: web
     name: chandergari
     env: node
-    plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: 10000
-      - key: USE_IN_MEMORY_DB
-        value: true
-      - key: GEMINI_API_KEY
-        sync: false
+    buildCommand: bun run build
+    startCommand: bun run start
+    # Optional: set Node version (default is 18.x)
+    # nodeVersion: 18.x
+    # Environment variables (if needed)
+    # envVars:
+    #   - key: SOME_KEY
+    #     value: value

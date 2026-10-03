@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "users": {
+      "title": "User Profile",
+      "description": "User preferences, saved trips, and metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "savedDestinations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid"]
+    },
+    "bookings": {
+      "title": "Travel Bookings",
+      "description": "Booked flights, rides, and sea cruises",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "type": { "type": "string" },
+        "title": { "type": "string" },
+        "price": { "type": "number" },
+        "details": { "type": "string" },
+        "bookedAt": { "type": "string" }
+      },
+      "required": ["userId", "title", "price"]
+    },
+    "aiGenerations": {
+      "title": "AI Studio Generations",
+      "description": "User generated travel photos, videos, and analysis notes",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "mediaType": { "type": "string" },
+        "url": { "type": "string" },
+        "prompt": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "mediaType"]
+    }
+  }
+}

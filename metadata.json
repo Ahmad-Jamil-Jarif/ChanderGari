@@ -1,10 +1,8 @@
 {
-  "name": "ChanderGari",
-  "description": "Your journey, perfectly mapped out.",
+  "name": "Chandergari",
+  "description": "Chandergari - Premium Travel Curation, Bangladeshi & International Destinations, Transport Booking, and Tour Budget Calculator",
   "requestFramePermissions": [
-    "geolocation"
-  ],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+    "camera",
+    "microphone"
   ]
 }
