@@ -340,7 +340,7 @@ export const TourBudgetCalculator: React.FC<TourBudgetCalculatorProps> = ({ onSa
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-[#555a50] font-medium mb-1 flex items-center gap-1">
+                <label className="text-[#555a50] font-medium mb-1 flex items-center gap-1">
                   <Calendar className="w-3.5 h-3.5 text-[#384b32]" />
                   <span>Duration (Days)</span>
                 </label>
@@ -355,7 +355,7 @@ export const TourBudgetCalculator: React.FC<TourBudgetCalculatorProps> = ({ onSa
               </div>
 
               <div>
-                <label className="block text-[#555a50] font-medium mb-1 flex items-center gap-1">
+                <label className="text-[#555a50] font-medium mb-1 flex items-center gap-1">
                   <Users className="w-3.5 h-3.5 text-[#384b32]" />
                   <span>Travelers (Pax)</span>
                 </label>
