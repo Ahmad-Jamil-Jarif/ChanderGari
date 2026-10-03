@@ -19,11 +19,11 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
 **CHANDERGARI** is a full-stack travel planning platform for exploring Bangladesh — Sajek, Bandarban, Cox's Bazar, Sundarbans and beyond. It fuses curated destination content, adventure activities, a smart tour guide, open-roof Chander Gari transport charters, BDT-aware budget planning, local discovery and saved-trip persistence through an **Express (Node)** backend and a **React 19 + Vite + Tailwind CSS** frontend with **Firebase Auth + Firestore** (graceful offline/localStorage fallback).
 
-### 🎯 What It Does
+###  What It Does
 
 | Module | Core Experience | Highlights |
 | :--- | :--- | :--- |
@@ -37,7 +37,7 @@
 
 ---
 
-## 🏛️ System Architecture
+##  System Architecture
 
 Express serves the API and mounts Vite middleware in development (`middlewareMode`), so the **same port serves backend + SPA**:
 
@@ -53,7 +53,7 @@ Firebase (client SDK)
 
 ---
 
-## 🧠 Core Modules
+##  Core Modules
 
 ### 1️⃣ Landing, Auth Gate & Navigation
 * `HeroLanding`, `Header`, `Footer` with login-gated navigation (`home` open, inner pages require auth).
@@ -81,7 +81,7 @@ Firebase (client SDK)
 
 ---
 
-## 💻 Web Application
+##  Web Application
 
 * **Design language**: forest `#384b32` / sand `#f7faf3` theme, Playfair Display + Inter, glassmorphism cards, Framer `motion` transitions.
 * **Pages** (gated): `home`, `destinations`, `activities`, `smartguide`, `transport`, `budget`, `discovery`, `saved`.
@@ -89,7 +89,7 @@ Firebase (client SDK)
 
 ---
 
-## 📸 App Tour (Screenshots)
+##  App Tour (Screenshots)
 
 ### 1. Login
 
@@ -159,7 +159,7 @@ Firebase (client SDK)
 
 ---
 
-## 🚀 Quickstart Guide
+##  Quickstart Guide
 
 ### Prerequisites
 * **Node.js 20+** & `npm`
@@ -249,7 +249,7 @@ ChanderGari/
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Layer | Technologies & Frameworks |
 | :--- | :--- |
@@ -260,7 +260,7 @@ ChanderGari/
 
 ---
 
-## 🏷️ Supported Destinations & Experiences
+##  Supported Destinations & Experiences
 
 * **Sajek Valley** — Meghpunji cottages, cloud mornings, Chander Gari ascent
 * **Bandarban** — Nafakhum & Debotakhum expeditions, Thanchi–Remakri routes
